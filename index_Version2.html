@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Engagement Hub - Photography Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header, Navigation, etc. ... unchanged -->
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Profile Tracker Tab ... unchanged except for tags, analytics rendered by JS -->
+
+                <!-- Engagement Planner Tab ... unchanged -->
+
+                <!-- Comment Generator Tab -->
+                <section class="tab-content hidden" id="comments">
+                    <div class="section-header">
+                        <h2>Comment Inspiration Generator</h2>
+                        <p class="section-subtitle">Generate authentic, meaningful comments for different photography niches</p>
+                    </div>
+
+                    <div class="comment-generator">
+                        <div class="generator-controls">
+                            <label class="form-label">Photography Niche</label>
+                            <select class="form-control" id="commentNiche">
+                                <option value="street">Street Photography</option>
+                                <option value="editorial">Editorial Fashion</option>
+                                <option value="commercial">Commercial Photography</option>
+                            </select>
+                            <button class="btn btn--primary" id="generateComment">Generate Comment</button>
+                        </div>
+
+                        <div class="generated-comment">
+                            <div class="comment-box">
+                                <div class="comment-text" id="commentText">
+                                    Select a niche and click "Generate Comment" to get inspired!
+                                </div>
+                                <button class="btn btn--outline btn--sm" id="copyComment">Copy Comment</button>
+                            </div>
+                        </div>
+
+                        <div class="custom-template-section">
+                            <h3>✍️ Your Custom Comment Templates</h3>
+                            <form id="customTemplateForm" style="display:flex;gap:8px;">
+                                <input type="text" id="customTemplateInput" class="form-control" placeholder="Write your own template..." style="flex:1;">
+                                <button type="submit" class="btn btn--primary btn--sm">Add</button>
+                            </form>
+                            <ul id="customTemplatesList" style="margin-top:12px;"></ul>
+                        </div>
+
+                        <div class="comment-tips">
+                            <h3>💡 Engagement Tips</h3>
+                            <ul class="tips-list" id="tipsList">
+                                <!-- Tips will be loaded here -->
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dashboard Tab ... unchanged -->
+
+                <!-- Insights Tab ... unchanged -->
+
+                <!-- Reminder Scheduling (add to Dashboard or Insights tab for example) -->
+                <section class="tab-content hidden" id="reminders">
+                    <div class="section-header">
+                        <h2>Engagement Reminders</h2>
+                        <p class="section-subtitle">Schedule browser notifications for important engagement!</p>
+                    </div>
+                    <form id="reminderForm" style="max-width:400px;">
+                        <div class="form-group">
+                            <label class="form-label">Reminder Message</label>
+                            <input type="text" class="form-control" id="reminderMessage" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Date & Time</label>
+                            <input type="datetime-local" class="form-control" id="reminderDatetime" required>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Set Reminder</button>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module">
+        import './app.js';
+    </script>
+</body>
+</html>
